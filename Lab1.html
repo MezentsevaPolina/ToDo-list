@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Мой список дел</title>
+  <link href="css/Lab1.css" rel="stylesheet">
+</head>
+<script>
+  function newElement(){
+    const id = Math.random().toString(36).substring(2);
+    const chid = Math.random().toString(36).substring(2);
+    let nom = document.querySelector("ul");
+    let li = document.createElement("li");
+    li.id = id;
+    let btli = document.createElement("button");
+    let chkli = document.createElement("input");
+    chkli.id = chid;
+    btli.innerText = "удалить";
+    btli.onclick = () => delElement(id);
+    chkli.type = "checkbox";
+    let inputText = document.getElementById("myInput").value;
+    let litxt = document.createTextNode(inputText);
+    if (inputText == ''){
+      alert("Вы не можете добавить пустую задачу!");
+    }else {
+      li.appendChild(chkli);
+      li.appendChild(litxt);
+      li.appendChild(btli);
+      nom.appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+  }
+  function delElement(id){
+      const btn = document.getElementById(id);
+      if (!btn) {
+        return;
+      }
+      btn.parentElement.removeChild(btn);
+  }
+
+</script>
+<body>
+<div id="myDiv" class="header">
+  <h1>Мой список дел</h1>
+  <input type="text" id="myInput" placeholder="Введите текст...">
+  <span onclick="newElement()" class="addButton">Добавить</span>
+  <span onclick="vce()" class="spanButton">Все дела</span>
+  <span onclick="nev()" class="spanButton">Невыполненные</span>
+  <span onclick="vip()" class="spanButton">Выполненные</span>
+  <ul id="myUl">
+
+  </ul>
+</div>
+</body>
+</html>

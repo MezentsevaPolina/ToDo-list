@@ -1,0 +1,133 @@
+*{
+  box-sizing: border-box;
+}
+
+ul{
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+ul li{
+  position: relative;
+  padding: 12px 40px 12px 8px;
+  background: #da29ee;
+  font-size: 18px;
+  transition: 0.2s;
+  list-style: none;
+  font-family: "Comic Sans MS";
+  border-radius: 5px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ul li button{
+  float: right;
+  cursor: pointer;
+  position: relative;
+  background: rgba(218, 41, 238, 0);
+  font-size: 18px;
+  transition: 0.2s;
+  font-family: "Comic Sans MS";
+  border-radius: 5px;
+}
+
+ul li:nth-child(odd){
+  background: #e2a2ec;
+}
+
+ul li:hover{
+  background: #ddd;
+}
+ul li button:hover{
+  background: #999999;
+}
+
+.header{
+  background-color: #f3ffaa;
+  padding: 50px 40px;
+  color: #222222;
+  text-align: center;
+}
+
+
+.addButton{
+  cursor: pointer;
+  position: relative;
+  padding: 12px 24px 12px 24px;
+  font-size: 19px;
+  transition: 0.2s;
+  background: #ba6af3;
+  font-family: "Comic Sans MS";
+  border-radius: 5px;
+}
+
+.addButton:hover{
+  background: #ffffff;
+}
+.spanButton{
+  cursor: pointer;
+  position: relative;
+  padding: 12px 24px 12px 24px;
+  font-size: 19px;
+  transition: 0.2s;
+  background: #cd98f3;
+  font-family: "Comic Sans MS";
+  border-radius: 5px;
+}
+.spanButton:hover{
+  background: #ffff;
+}
+
+.delButton{
+  cursor: pointer;
+  position: relative;
+  padding: 12px 24px 12px 24px;
+  font-size: 19px;
+  transition: 0.2s;
+  background: #a940f5;
+  font-family: "Comic Sans MS";
+  border-radius: 5px;
+}
+
+.delButton:hover{
+  background: #ffffff;
+}
+h1{
+  font-family: "Comic Sans MS";
+}
+
+input{
+  font-family: "Comic Sans MS";
+  padding: 12px 40px 12px 8px;
+  font-size: 19px;
+  border-color: #222222;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+li input:checked{
+
+}
+
+#highload0 {
+  opacity: 0;
+}
+#highload0 ~ label::before {
+  content: '';
+  text-align: center;
+  color: white;
+  line-height: 1em;
+  width: 1em;
+  height: 1em;
+  border: 2px inset #000;
+  border-radius: 0.25em;
+  margin: 0.25em;
+  display: inline-block;
+}
+#highload0:checked ~ label::before {
+  color: #000000;
+  border: 2px inset #000000;
+  background-color: #222222;
+}
